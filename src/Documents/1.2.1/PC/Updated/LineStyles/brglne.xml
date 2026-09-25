@@ -2,14 +2,26 @@
 <?S100lineage source="S52Preslib4.0" format="S100Ed2" version="0.1" creationDate="2015 - 03 - 13"?>
 <?S100Meta name="brglne" exposition="boundary of a ice berg area"?>
 <lineStyle offset="0">
-  <intervalLength>45.988</intervalLength>
+  <intervalLength>46.0</intervalLength>
   <pen width="0.32">
-    <color>TESTH</color>
+    <color>DEPWL</color>
   </pen>
-    <symbol reference="brgare">
+  <dash>
+    <start>0</start>
+    <length>4</length>
+  </dash>
+  <symbol reference="brgare">
     <position>8</position>
   </symbol>
+  <dash>
+    <start>12</start>
+    <length>12</length>
+  </dash>
   <symbol reference="brgare">
     <position>28</position>
   </symbol>
+  <dash>
+    <start>32</start>
+    <length>14</length>
+  </dash>
 </lineStyle>

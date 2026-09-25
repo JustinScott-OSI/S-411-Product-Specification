@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<portrayalCatalog xmlns:xsl="http://www.w3.org/2001/XMLSchema" productId="S-127" version="1.0.0">
+<portrayalCatalog xmlns:xsl="http://www.w3.org/2001/XMLSchema" productId="S-411" version="1.0.0">
   <pixmaps/>
   <colorProfiles>
     <colorProfile id="colorProfile.xml">
@@ -67,25 +67,35 @@
 			    <symbol id="i_lead">
       <description>
         <name>i_lead</name>
-        <description>i_lead</description>
+        <description>Ice Lead</description>
         <language>en</language>
       </description>
       <fileName>i_lead.svg</fileName>
       <fileType>Symbol</fileType>
       <fileFormat>SVG</fileFormat>
     </symbol>
-  </symbols>
-  <lineStyles>
-    <lineStyle id="brglne">
+			    <symbol id="icethk_unk">
       <description>
-        <name>brglne</name>
-        <description>brglne</description>
+        <name>icethk_unk</name>
+        <description>Ice Thickness Unknown</description>
         <language>en</language>
       </description>
-      <fileName>brglne.xml</fileName>
-      <fileType>LineStyle</fileType>
-      <fileFormat>XML</fileFormat>
-    </lineStyle>
+      <fileName>icethk_u.svg</fileName>
+      <fileType>Symbol</fileType>
+      <fileFormat>SVG</fileFormat>
+    </symbol>
+  </symbols>
+  <lineStyles>
+		<lineStyle id="BRGLNE">
+			<description>
+				<name>BRGLNE</name>
+				<description>BRGLNE</description>
+				<language>en</language>
+			</description>
+			<fileName>BRGLNE.xml</fileName>
+			<fileType>LineStyle</fileType>
+			<fileFormat>XML</fileFormat>
+		</lineStyle>
   </lineStyles>
   <areaFills/>
   <fonts/>
@@ -118,353 +128,405 @@
         <description>main rule file</description>
         <language>en</language>
       </description>
-      <fileName>main.xsl</fileName>
+      <fileName>main.lua</fileName>
       <fileType>Rule</fileType>
-      <fileFormat>XSLT</fileFormat>
+      <fileFormat>lua</fileFormat>
       <ruleType>TopLevelTemplate</ruleType>
     </ruleFile>
+	<ruleFile id="Default">
+		<description>
+		  <name>Default</name>
+		  <description>Default</description>
+		  <language>eng</language>
+		</description>
+		<fileName>Default.lua</fileName>
+		<fileType>Rule</fileType>
+		<fileFormat>lua</fileFormat>
+		<ruleType>SubTemplate</ruleType>
+	  </ruleFile>
+	  <ruleFile id="PortrayalAPI">
+		<description>
+		   <name>PortrayalAPI</name>
+		   <description>Portrayal API</description>
+		   <language>eng</language>
+		</description>
+		<fileName>PortrayalAPI.lua</fileName>
+		<fileType>Rule</fileType>
+		<fileFormat>LUA</fileFormat>
+		<ruleType>SubTemplate</ruleType>
+	 </ruleFile>
+	 <ruleFile id="PortrayalModel">
+		<description>
+		   <name>PortrayalModel</name>
+		   <description>Portrayal Model</description>
+		   <language>eng</language>
+		</description>
+		<fileName>PortrayalModel.lua</fileName>
+		<fileType>Rule</fileType>
+		<fileFormat>LUA</fileFormat>
+		<ruleType>SubTemplate</ruleType>
+	 </ruleFile>
+	 <ruleFile id="S100Scripting">
+		<description>
+		   <name>S100Scripting</name>
+		   <description>S100 Scripting</description>
+		   <language>eng</language>
+		</description>
+		<fileName>S100Scripting.lua</fileName>
+		<fileType>Rule</fileType>
+		<fileFormat>LUA</fileFormat>
+		<ruleType>SubTemplate</ruleType>
+	 </ruleFile>
     <ruleFile id="DataCoverage.xsl">
       <description>
         <name>DataCoverage</name>
         <description>DataCoverage</description>
         <language>en</language>
       </description>
-      <fileName>DataCoverage.xsl</fileName>
+      <fileName>DataCoverage.lua</fileName>
       <fileType>Rule</fileType>
-      <fileFormat>XSLT</fileFormat>
-      <ruleType>SubTemplate</ruleType>
-    </ruleFile>
-    <ruleFile id="attributeRules.xsl">
-      <description>
-        <name>attributeRules</name>
-        <description>attributeRules</description>
-        <language>en</language>
-      </description>
-      <fileName>attributeRules.xsl</fileName>
-      <fileType>Rule</fileType>
-      <fileFormat>XSLT</fileFormat>
-      <ruleType>SubTemplate</ruleType>
-    </ruleFile>
-    <ruleFile id="Default.xsl">
-      <description>
-        <name>Default</name>
-        <description>Default</description>
-        <language>en</language>
-      </description>
-      <fileName>Default.xsl</fileName>
-      <fileType>Rule</fileType>
-      <fileFormat>XSLT</fileFormat>
+      <fileFormat>lua</fileFormat>
       <ruleType>SubTemplate</ruleType>
     </ruleFile>
 	    <ruleFile id="StageOfMelt.xsl">
       <description>
         <name>StageOfMelt</name>
-        <description>StageOfMelt</description>
+        <description>Stage of Melt</description>
         <language>en</language>
       </description>
-      <fileName>StageOfMelt.xsl</fileName>
+      <fileName>StageOfMelt.lua</fileName>
       <fileType>Rule</fileType>
-      <fileFormat>XSLT</fileFormat>
+      <fileFormat>LUA</fileFormat>
       <ruleType>SubTemplate</ruleType>
     </ruleFile>
-	    </ruleFile>
-	    <ruleFile id="SnowCover.xsl">
+	    <ruleFile id="SnowCover.lua">
       <description>
         <name>SnowCover</name>
-        <description>Snow cover</description>
+        <description>Snow Cover</description>
         <language>en</language>
       </description>
-      <fileName>SnowCover.xsl</fileName>
+      <fileName>SnowCover.lua</fileName>
       <fileType>Rule</fileType>
-      <fileFormat>XSLT</fileFormat>
+      <fileFormat>LUA</fileFormat>
       <ruleType>SubTemplate</ruleType>
     </ruleFile>
-		    <ruleFile id="IceKeelBummock.xsl">
+		    <ruleFile id="IceKeelBummock.lua">
       <description>
         <name>IceKeelBummock</name>
-        <description>IceKeel Bummock</description>
+        <description>Ice Keel Bummock</description>
         <language>en</language>
       </description>
-      <fileName>IceKeelBummock.xsl</fileName>
+      <fileName>IceKeelBummock.lua</fileName>
       <fileType>Rule</fileType>
-      <fileFormat>XSLT</fileFormat>
+      <fileFormat>LUA</fileFormat>
       <ruleType>SubTemplate</ruleType>
     </ruleFile>
-	
-	<ruleFile id="icethk_unk.xsl">
+	<ruleFile id="IceThickness.lua">
       <description>
-        <name>icethk</name>
-        <description>icethk</description>
+        <name>IceThickness</name>
+        <description>Ice Thickness</description>
         <language>en</language>
       </description>
-      <fileName>icethk_unk.xsl</fileName>
+      <fileName>IceThickness.lua</fileName>
       <fileType>Rule</fileType>
-      <fileFormat>XSLT</fileFormat>
+      <fileFormat>LUA</fileFormat>
       <ruleType>SubTemplate</ruleType>
     </ruleFile>
-		<ruleFile id="i_lead.xsl">
+		<ruleFile id="IceLead.lua">
       <description>
-        <name>i_lead</name>
-        <description>ice lead</description>
+        <name>IceLead</name>
+        <description>Ice Lead</description>
         <language>en</language>
       </description>
-      <fileName>i_lead.xsl</fileName>
+      <fileName>IceLead.lua</fileName>
       <fileType>Rule</fileType>
-      <fileFormat>XSLT</fileFormat>
+      <fileFormat>LUA</fileFormat>
       <ruleType>SubTemplate</ruleType>
     </ruleFile>
-    <ruleFile id="QualityOfNonBathymetricData.xsl">
+	<ruleFile id="Iceberg.lua">
       <description>
-        <name>QualityOfNonBathymetricData</name>
-        <description>QualityOfNonBathymetricData</description>
+        <name>Iceberg</name>
+        <description>Iceberg</description>
         <language>en</language>
       </description>
-      <fileName>QualityOfNonBathymetricData.xsl</fileName>
+      <fileName>Iceberg.lua</fileName>
       <fileType>Rule</fileType>
-      <fileFormat>XSLT</fileFormat>
+      <fileFormat>LUA</fileFormat>
       <ruleType>SubTemplate</ruleType>
     </ruleFile>
-    <ruleFile id="CautionArea.xsl">
+	<ruleFile id="IcebergArea.lua">
       <description>
-        <name>Caution Area</name>
-        <description>Caution Area rule file</description>
+        <name>IcebergArea</name>
+        <description>Iceberg Area</description>
         <language>en</language>
       </description>
-      <fileName>CautionArea.xsl</fileName>
+      <fileName>IcebergArea.lua</fileName>
       <fileType>Rule</fileType>
-      <fileFormat>XSLT</fileFormat>
+      <fileFormat>LUA</fileFormat>
       <ruleType>SubTemplate</ruleType>
     </ruleFile>
-    <ruleFile id="IspsCodeSecurityLevel.xsl">
+	<ruleFile id="IcebergLimit.lua">
       <description>
-        <name>Isps Code Security Level</name>
-        <description>Isps Code Security Level rule file</description>
+        <name>IcebergLimit</name>
+        <description>Iceberg Limit</description>
         <language>en</language>
       </description>
-      <fileName>IspsCodeSecurityLevel.xsl</fileName>
+      <fileName>IcebergLimit.lua</fileName>
       <fileType>Rule</fileType>
-      <fileFormat>XSLT</fileFormat>
+      <fileFormat>LUA</fileFormat>
       <ruleType>SubTemplate</ruleType>
     </ruleFile>
-    <ruleFile id="LocalPortServiceArea.xsl">
+	<ruleFile id="IceEdge.lua">
       <description>
-        <name>Local Port Service Area</name>
-        <description>Local Port Service Area rule file</description>
+        <name>IceEdge</name>
+        <description>Ice Edge</description>
         <language>en</language>
       </description>
-      <fileName>LocalPortServiceArea.xsl</fileName>
+      <fileName>IceEdge.lua</fileName>
       <fileType>Rule</fileType>
-      <fileFormat>XSLT</fileFormat>
+      <fileFormat>LUA</fileFormat>
       <ruleType>SubTemplate</ruleType>
     </ruleFile>
-    <ruleFile id="MilitaryPracticeArea.xsl">
+	<ruleFile id="LakeIce.lua">
       <description>
-        <name>Military Practice Areaa</name>
-        <description>Military Practice Area rule file</description>
+        <name>LakeIce</name>
+        <description>Lake Ice</description>
         <language>en</language>
       </description>
-      <fileName>MilitaryPracticeArea.xsl</fileName>
+      <fileName>LakeIce.lua</fileName>
       <fileType>Rule</fileType>
-      <fileFormat>XSLT</fileFormat>
+      <fileFormat>LUA</fileFormat>
       <ruleType>SubTemplate</ruleType>
     </ruleFile>
-    <ruleFile id="PilotageDistrict.xsl">
+	<ruleFile id="SeaIce.lua">
       <description>
-        <name>Pilotage District</name>
-        <description>Pilotage District rule file</description>
+        <name>SeaIce</name>
+        <description>Sea Ice</description>
         <language>en</language>
       </description>
-      <fileName>PilotageDistrict.xsl</fileName>
+      <fileName>SeaIce.lua</fileName>
       <fileType>Rule</fileType>
-      <fileFormat>XSLT</fileFormat>
+      <fileFormat>LUA</fileFormat>
       <ruleType>SubTemplate</ruleType>
     </ruleFile>
-    <ruleFile id="PilotBoardingPlace.xsl">
+	<ruleFile id="LineOfIceFracture.lua">
       <description>
-        <name>Pilot Boarding Place</name>
-        <description>Pilot Boarding Place rule file</description>
+        <name>LineOfIceFracture</name>
+        <description>Line of Ice Fracture</description>
         <language>en</language>
       </description>
-      <fileName>PilotBoardingPlace.xsl</fileName>
+      <fileName>LineOfIceFracture.lua</fileName>
       <fileType>Rule</fileType>
-      <fileFormat>XSLT</fileFormat>
+      <fileFormat>LUA</fileFormat>
+      <ruleType>SubTemplate</ruleType>
+    </ruleFile>	
+	<ruleFile id="LineOfIceLead.lua">
+      <description>
+        <name>LineOfIceLead</name>
+        <description>Line of Ice Lead</description>
+        <language>en</language>
+      </description>
+      <fileName>LineOfIceLead.lua</fileName>
+      <fileType>Rule</fileType>
+      <fileFormat>LUA</fileFormat>
       <ruleType>SubTemplate</ruleType>
     </ruleFile>
-    <ruleFile id="PilotService.xsl">
+	<ruleFile id="LimitOfOpenWater.lua">
       <description>
-        <name>Pilot Service</name>
-        <description>Pilot Service rule file</description>
+        <name>LimitOfOpenWater</name>
+        <description>Limit of Open Water</description>
         <language>en</language>
       </description>
-      <fileName>PilotService.xsl</fileName>
+      <fileName>LimitOfOpenWater.lua</fileName>
       <fileType>Rule</fileType>
-      <fileFormat>XSLT</fileFormat>
+      <fileFormat>LUA</fileFormat>
       <ruleType>SubTemplate</ruleType>
     </ruleFile>
-    <ruleFile id="PiracyRiskArea.xsl">
+	<ruleFile id="LimitOfAllKnownIce.lua">
       <description>
-        <name>Piracy Risk Area</name>
-        <description>Piracy Risk Area rule file</description>
+        <name>LimitOfAllKnownIce</name>
+        <description>Limit of All Known Ice</description>
         <language>en</language>
       </description>
-      <fileName>PiracyRiskArea.xsl</fileName>
+      <fileName>LimitOfAllKnownIce.lua</fileName>
       <fileType>Rule</fileType>
-      <fileFormat>XSLT</fileFormat>
+      <fileFormat>LUA</fileFormat>
       <ruleType>SubTemplate</ruleType>
     </ruleFile>
-    <ruleFile id="PlaceOfRefuge.xsl">
+	<ruleFile id="LineOfIceRidge.lua">
       <description>
-        <name>Place Of Refuge</name>
-        <description>Place Of Refuge rule file</description>
+        <name>LineOfIceRidge</name>
+        <description>Line of Ice Ridge</description>
         <language>en</language>
       </description>
-      <fileName>PlaceOfRefuge.xsl</fileName>
+      <fileName>LineOfIceRidge.lua</fileName>
       <fileType>Rule</fileType>
-      <fileFormat>XSLT</fileFormat>
+      <fileFormat>LUA</fileFormat>
       <ruleType>SubTemplate</ruleType>
     </ruleFile>
-    <ruleFile id="RadarRange.xsl">
+	<ruleFile id="LineOfIceCrack.lua">
       <description>
-        <name>Radar Range</name>
-        <description>Radar Range rule file</description>
+        <name>LineOfIceCrack</name>
+        <description>Line of Ice Crack</description>
         <language>en</language>
       </description>
-      <fileName>RadarRange.xsl</fileName>
+      <fileName>LineOfIceCrack.lua</fileName>
       <fileType>Rule</fileType>
-      <fileFormat>XSLT</fileFormat>
+      <fileFormat>LUA</fileFormat>
       <ruleType>SubTemplate</ruleType>
     </ruleFile>
-    <ruleFile id="RadioCallingInPoint.xsl">
+	<ruleFile id="IceCompacting.lua">
       <description>
-        <name>Radio Calling In Point</name>
-        <description>Radio Calling In Point rule file</description>
+        <name>IceCompacting</name>
+        <description>Ice Compacting</description>
         <language>en</language>
       </description>
-      <fileName>RadioCallingInPoint.xsl</fileName>
+      <fileName>IceCompacting.lua</fileName>
       <fileType>Rule</fileType>
-      <fileFormat>XSLT</fileFormat>
+      <fileFormat>LUA</fileFormat>
       <ruleType>SubTemplate</ruleType>
     </ruleFile>
-    <ruleFile id="RestrictedAreaNavigational.xsl">
+	<ruleFile id="Floeberg.lua">
       <description>
-        <name>Restricted Area Navigational</name>
-        <description>Restricted Area Navigational rule file</description>
+        <name>Floeberg</name>
+        <description>Floeberg</description>
         <language>en</language>
       </description>
-      <fileName>RestrictedAreaNavigational.xsl</fileName>
+      <fileName>Floeberg.lua</fileName>
       <fileType>Rule</fileType>
-      <fileFormat>XSLT</fileFormat>
+      <fileFormat>LUA</fileFormat>
       <ruleType>SubTemplate</ruleType>
     </ruleFile>
-    <ruleFile id="RestrictedAreaRegulatory.xsl">
+	<ruleFile id="IceShear.lua">
       <description>
-        <name>Restricted Area Regulatory</name>
-        <description>Restricted Area Regulatory rule file</description>
+        <name>IceShear</name>
+        <description>Ice Shear</description>
         <language>en</language>
       </description>
-      <fileName>RestrictedAreaRegulatory.xsl</fileName>
+      <fileName>IceShear.lua</fileName>
       <fileType>Rule</fileType>
-      <fileFormat>XSLT</fileFormat>
+      <fileFormat>LUA</fileFormat>
       <ruleType>SubTemplate</ruleType>
     </ruleFile>
-    <ruleFile id="RouteingMeasure.xsl">
+	<ruleFile id="IceDivergence.lua">
       <description>
-        <name>Routeing Measure</name>
-        <description>Routeing Measure rule file</description>
+        <name>IceDivergence</name>
+        <description>Ice Divergence</description>
         <language>en</language>
       </description>
-      <fileName>RadioStation.xsl</fileName>
+      <fileName>IceDivergence.lua</fileName>
       <fileType>Rule</fileType>
-      <fileFormat>XSLT</fileFormat>
+      <fileFormat>LUA</fileFormat>
       <ruleType>SubTemplate</ruleType>
     </ruleFile>
-    <ruleFile id="ShipReportingServiceArea.xsl">
+	<ruleFile id="IceRidgeHummock.lua">
       <description>
-        <name>Ship Reporting Service Area</name>
-        <description>Ship Reporting Service Area rule file</description>
+        <name>IceRidgeHummock</name>
+        <description>Ice Ridge Hummock</description>
         <language>en</language>
       </description>
-      <fileName>ShipReportingServiceArea.xsl</fileName>
+      <fileName>IceRidgeHummock.lua</fileName>
       <fileType>Rule</fileType>
-      <fileFormat>XSLT</fileFormat>
+      <fileFormat>LUA</fileFormat>
       <ruleType>SubTemplate</ruleType>
     </ruleFile>
-    <ruleFile id="SignalStationTraffic.xsl">
+	<ruleFile id="IceDrift.lua">
       <description>
-        <name>Signal StationTraffic Area</name>
-        <description>Signal StationTraffic rule file</description>
+        <name>IceDrift</name>
+        <description>Ice Drift</description>
         <language>en</language>
       </description>
-      <fileName>SignalStationTraffic.xsl</fileName>
+      <fileName>IceDrift.lua</fileName>
       <fileType>Rule</fileType>
-      <fileFormat>XSLT</fileFormat>
+      <fileFormat>LUA</fileFormat>
       <ruleType>SubTemplate</ruleType>
     </ruleFile>
-    <ruleFile id="SignalStationWarning.xsl">
+	<ruleFile id="IceFracture.lua">
       <description>
-        <name>Signal Station Warning</name>
-        <description>Signal Station Warning rule file</description>
+        <name>IceFracture</name>
+        <description>Ice Fracture</description>
         <language>en</language>
       </description>
-      <fileName>SignalStationWarning.xsl</fileName>
+      <fileName>IceFracture.lua</fileName>
       <fileType>Rule</fileType>
-      <fileFormat>XSLT</fileFormat>
+      <fileFormat>LUA</fileFormat>
       <ruleType>SubTemplate</ruleType>
     </ruleFile>
-    <ruleFile id="simpleLineStyle.xsl">
+	<ruleFile id="IceRafting.lua">
       <description>
-        <name>simpleLineStyle</name>
-        <description>simpleLineStyle</description>
+        <name>IceRafting</name>
+        <description>Ice Rafting</description>
         <language>en</language>
       </description>
-      <fileName>simpleLineStyle.xsl</fileName>
+      <fileName>IceRafting.lua</fileName>
       <fileType>Rule</fileType>
-      <fileFormat>XSLT</fileFormat>
+      <fileFormat>LUA</fileFormat>
       <ruleType>SubTemplate</ruleType>
     </ruleFile>
-    <ruleFile id="textStyle.xsl">
+	<ruleFile id="JammedBrashBarrier.lua">
       <description>
-        <name>textStyle</name>
-        <description>textStyle</description>
+        <name>JammedBrashBarrier</name>
+        <description>Jammed Brash Barrier</description>
         <language>en</language>
       </description>
-      <fileName>textStyle.xsl</fileName>
+      <fileName>JammedBrashBarrier.lua</fileName>
       <fileType>Rule</fileType>
-      <fileFormat>XSLT</fileFormat>
+      <fileFormat>LUA</fileFormat>
       <ruleType>SubTemplate</ruleType>
     </ruleFile>
-    <ruleFile id="UnderkeelClearanceAllowanceArea.xsl">
+	<ruleFile id="StripsAndPatches.lua">
       <description>
-        <name>Underkeel Clearance Allowance Area</name>
-        <description>Underkeel Clearance Allowance Area</description>
+        <name>StripsAndPatches</name>
+        <description>Strips and Patches</description>
         <language>en</language>
       </description>
-      <fileName>UnderkeelClearanceAllowanceArea.xsl</fileName>
+      <fileName>StripsAndPatches.lua</fileName>
       <fileType>Rule</fileType>
-      <fileFormat>XSLT</fileFormat>
+      <fileFormat>LUA</fileFormat>
       <ruleType>SubTemplate</ruleType>
     </ruleFile>
-    <ruleFile id="VesselTrafficServiceArea.xsl">
+	<ruleFile id="GroundedHummock.lua">
       <description>
-        <name>Vessel Traffic Service Area</name>
-        <description>Vessel Traffic Service Area</description>
+        <name>GroundedHummock</name>
+        <description>Grounded Hummock</description>
         <language>en</language>
       </description>
-      <fileName>VesselTrafficServiceArea.xsl</fileName>
+      <fileName>GroundedHummock.lua</fileName>
       <fileType>Rule</fileType>
-      <fileFormat>XSLT</fileFormat>
-      <ruleType>SubTemplate</ruleType>
-    </ruleFile>
-    <ruleFile id="WaterwayArea.xsl">
-      <description>
-        <name>Waterway Area</name>
-        <description>Waterway Area</description>
-        <language>en</language>
-      </description>
-      <fileName>WaterwayArea.xsl</fileName>
-      <fileType>Rule</fileType>
-      <fileFormat>XSLT</fileFormat>
+      <fileFormat>LUA</fileFormat>
       <ruleType>SubTemplate</ruleType>
     </ruleFile>
   </rules>
+  <styleSheets>
+      <styleSheet id="daySvgStyle">
+         <description>
+            <name>Day</name>
+            <description>CSS file for day palette</description>
+            <language>eng</language>
+         </description>
+         <fileName>daySvgStyle.css</fileName>
+         <fileType>StyleSheet</fileType>
+         <fileFormat>XML</fileFormat> <!-- fileFormat will need to be updated when Part 9 is updated to include CSS file format. -->
+      </styleSheet>
+      <styleSheet id="duskSvgStyle">
+         <description>
+            <name>Dusk</name>
+            <description>CSS file for dusk palette</description>
+            <language>eng</language>
+         </description>
+         <fileName>duskSvgStyle.css</fileName>
+         <fileType>StyleSheet</fileType>
+         <fileFormat>XML</fileFormat> <!-- fileFormat will need to be updated when Part 9 is updated to include CSS file format. -->
+      </styleSheet>
+      <styleSheet id="nightSvgStyle">
+         <description>
+            <name>Night</name>
+            <description>CSS file for night palette</description>
+            <language>eng</language>
+         </description>
+         <fileName>nightSvgStyle.css</fileName>
+         <fileType>StyleSheet</fileType>
+         <fileFormat>XML</fileFormat> <!-- fileFormat will need to be updated when Part 9 is updated to include CSS file format. -->
+      </styleSheet>
+   </styleSheets>
 </portrayalCatalog>

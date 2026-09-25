@@ -9,7 +9,7 @@
     </S100SVG>
   </metadata>
   <circle class="pivotPoint layout" fill="none" cx="0" cy="0" r="0.4" />
-  <rect class="symbolBox layout" fill="none" x="-2.51" y="2.52" height="2.52" width="5.01" />
+  <rect class="symbolBox layout" fill="none" x="-2.51" y="0" height="2.52" width="5.01" />
   <rect class="svgBox layout" fill="none" x="-2.51" y="0" height="2.52" width="5.01" />
   <path d=" M -2.51,0.19 L 2.49,0.19" class="sl f0 sCHBK" style="stroke-width:0.32;" />
   <path d=" M -2.5,0.72 L -1.25,2.52 L 0,0.72 L 1.25,2.52 L 2.5,0.72 L -2.5,0.72 Z" class="fCHBLK" style="stroke-width:0.32;" />
